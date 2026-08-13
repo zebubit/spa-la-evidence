@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B0B0B">
+<title>Spa Diamond La Evidence | Estética Avançada e Mentoria em Cuiabá</title>
+<meta name="description" content="Estética avançada em Cuiabá com os métodos Bumbum Brasil 360° Glúteo e 360° Labial. Atendimento e mentoria para profissionais. Dra. Laura Lima.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Spa Diamond La Evidence | Estética Avançada">
+<meta property="og:description" content="Método próprio, resultado real. Atendimento em Cuiabá e mentoria para profissionais de todo o Brasil.">
+<meta property="og:image" content="img/fachada.webp">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --preto:#0B0B0B; --carvao:#141210; --caixa:#1B1815; --caixa2:#221E19;
+  --ouro:#C9A227; --ouro-lt:#E8C766; --ouro-fr:rgba(201,162,39,.3);
+  --creme:#F3EDE2; --txt:#EDE7DC; --mut:#A79E90; --linha:rgba(201,162,39,.22);
+  --zap:#0e7a3e; --zap-h:#0b6b35;
+  --r:18px; --rg:26px;
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:78px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--preto);color:var(--txt);font:16px/1.7 Jost,system-ui,-apple-system,sans-serif;font-weight:300;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.08;text-wrap:balance}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);background:var(--ouro);color:#151206;padding:14px 22px;font-weight:600;z-index:999;min-height:44px;display:inline-flex;align-items:center}
+.skip:focus{width:auto;height:auto;clip:auto;overflow:visible;left:12px;top:12px}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:60;background:rgba(11,11,11,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--linha)}
+.topo-in{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.marca{display:flex;flex-direction:column;padding:10px 0}
+.marca b{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:600;color:var(--ouro-lt);letter-spacing:.03em;line-height:1}
+.marca small{font-size:.875rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);margin-top:5px}
+.menu{display:flex;align-items:center;gap:2px;font-size:.86rem;font-weight:400;letter-spacing:.05em}
+.menu a{padding:12px 13px;min-height:44px;display:inline-flex;align-items:center;border-radius:99px;transition:color .2s,background .2s;text-transform:uppercase;font-size:.875rem;letter-spacing:.11em}
+.menu a:hover{color:var(--ouro-lt);background:rgba(201,162,39,.08)}
+.menu .zap{background:var(--zap);color:#fff;padding:12px 20px;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:.875rem}
+.menu .zap:hover{background:var(--zap-h);color:#fff}
+.menu .zap svg{width:17px;height:17px}
+.abrir{display:none;width:48px;height:48px;border:0;background:transparent;color:var(--ouro-lt);cursor:pointer;align-items:center;justify-content:center;border-radius:10px}
+.abrir svg{width:26px;height:26px}
+.chk{display:none}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:15px 32px;border-radius:99px;font-family:Jost,sans-serif;font-weight:500;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;transition:transform .25s ease,background .25s ease,color .25s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-ouro{background:linear-gradient(135deg,var(--ouro-lt),var(--ouro));color:#191305}
+.btn-ouro:hover{background:linear-gradient(135deg,#f0d585,var(--ouro-lt))}
+.btn-zap{background:var(--zap);color:#fff}
+.btn-zap:hover{background:var(--zap-h)}
+.btn-linha{border-color:var(--ouro-fr);color:var(--ouro-lt)}
+.btn-linha:hover{background:rgba(201,162,39,.1)}
+.acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:var(--s4)}
+
+/* blocos */
+.selo{display:inline-flex;align-items:center;gap:10px;font-size:.875rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro)}
+.selo::before{content:"";width:30px;height:1px;background:var(--ouro)}
+.sec{padding:var(--s6) 0}
+.tit{font-size:clamp(2.2rem,5.4vw,4rem);color:var(--creme);letter-spacing:-.01em;margin:16px 0 18px}
+.tit em{font-style:italic;color:var(--ouro-lt)}
+.lead{color:var(--mut);font-size:1.06rem;max-width:62ch;font-weight:300}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:grid;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,11,.88) 0%,rgba(11,11,11,.62) 48%,rgba(11,11,11,.24) 100%)}
+.hero-in{position:relative;z-index:1;padding:var(--s6) 0}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);color:#fff;margin:20px 0 18px;line-height:1.02;text-shadow:0 3px 26px rgba(0,0,0,.75)}
+.hero h1 em{display:block;font-style:italic;color:var(--ouro-lt)}
+.hero p.sub{font-size:1.14rem;color:#E4DDD2;max-width:52ch;font-weight:300;text-shadow:0 2px 16px rgba(0,0,0,.8)}
+.nota{display:flex;flex-wrap:wrap;gap:26px;margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--linha)}
+.nota div{font-size:1.02rem;color:var(--creme);font-weight:500}
+.nota small{display:block;font-size:.875rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro);margin-bottom:4px}
+
+/* autoridade */
+.aut{background:var(--carvao);border-block:1px solid var(--linha)}
+.aut-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.au{text-align:center;padding:26px 16px}
+.au .n{font-family:"Cormorant Garamond",serif;font-size:2.5rem;font-weight:600;color:var(--ouro-lt);line-height:1}
+.au .l{font-size:.875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:8px}
+
+/* métodos */
+.met-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:var(--s5)}
+.met{background:var(--caixa);border:1px solid var(--linha);border-radius:var(--rg);padding:38px;transition:transform .3s ease,border-color .3s ease}
+.met:hover{transform:translateY(-6px);border-color:var(--ouro-fr)}
+.met .tag{display:inline-block;font-size:.875rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro);border:1px solid var(--ouro-fr);padding:6px 14px;border-radius:99px;margin-bottom:18px}
+.met h3{font-size:2rem;color:var(--creme);margin-bottom:12px}
+.met h3 em{font-style:italic;color:var(--ouro-lt)}
+.met p{color:var(--mut);font-size:1rem}
+.met ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:11px}
+.met li{display:flex;gap:12px;font-size:.95rem;color:var(--txt)}
+.met li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ouro);flex:none;margin-top:9px}
+
+/* resultados */
+.res{background:var(--carvao)}
+.abas{display:flex;gap:10px;justify-content:center;margin:var(--s4) 0 var(--s3);flex-wrap:wrap}
+.aba{padding:12px 26px;border-radius:99px;border:1px solid var(--linha);background:transparent;color:var(--mut);
+  font-family:Jost,sans-serif;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;min-height:44px;transition:all .25s}
+.aba:hover{color:var(--ouro-lt);border-color:var(--ouro-fr)}
+.aba.on{background:linear-gradient(135deg,var(--ouro-lt),var(--ouro));color:#191305;border-color:transparent}
+.trilho{display:flex;gap:16px;margin-top:var(--s3);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-left:16px;padding:4px 16px 20px;margin-inline:-16px;scrollbar-width:thin;scrollbar-color:var(--ouro-fr) transparent}
+.trilho::-webkit-scrollbar{height:7px}
+.trilho::-webkit-scrollbar-track{background:var(--caixa);border-radius:99px}
+.trilho::-webkit-scrollbar-thumb{background:var(--ouro-fr);border-radius:99px}
+.foto{position:relative;flex:0 0 258px;scroll-snap-align:start;border-radius:var(--r);overflow:hidden;aspect-ratio:9/16;background:var(--caixa);border:1px solid var(--linha);margin:0}
+.foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.foto:hover img{transform:scale(1.05)}
+.res-nota{text-align:center;margin-top:var(--s3);color:var(--mut);font-size:.95rem;max-width:70ch;margin-inline:auto}
+.setas{display:flex;gap:10px;justify-content:center;margin-top:var(--s2)}
+.seta{width:48px;height:48px;border-radius:50%;border:1px solid var(--linha);background:transparent;color:var(--ouro-lt);display:grid;place-items:center;cursor:pointer;transition:all .25s}
+.seta:hover{background:var(--ouro);color:#191305;border-color:transparent}
+.seta svg{width:20px;height:20px}
+
+/* vídeos */
+.vid{background:var(--carvao)}
+.v-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:var(--s5)}
+.v-card{position:relative;display:block;border-radius:var(--r);overflow:hidden;aspect-ratio:9/16;background:var(--caixa);border:1px solid var(--linha);transition:transform .3s ease,border-color .3s ease}
+.v-card:hover{transform:translateY(-6px);border-color:var(--ouro-fr)}
+.v-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.v-card:hover img{transform:scale(1.05)}
+.v-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,.86) 0%,rgba(11,11,11,.08) 48%,transparent 70%)}
+.v-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(243,237,226,.93);display:grid;place-items:center;z-index:2;transition:transform .25s ease}
+.v-play svg{width:22px;height:22px;color:var(--preto);margin-left:3px}
+.v-card:hover .v-play{transform:translate(-50%,-50%) scale(1.12)}
+.v-leg{position:absolute;left:0;right:0;bottom:0;padding:18px;z-index:2;color:var(--creme);font-weight:400;font-size:.95rem;line-height:1.35}
+
+/* mentoria */
+.men{position:relative;overflow:hidden}
+.men-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+.men-foto{border-radius:var(--rg);overflow:hidden;border:1px solid var(--ouro-fr);box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.men-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%}
+.men-lista{list-style:none;padding:0;margin:var(--s3) 0 0;display:grid;gap:14px}
+.men-lista li{display:flex;gap:14px;align-items:flex-start;color:var(--txt);font-size:1rem}
+.men-lista svg{width:20px;height:20px;flex:none;color:var(--ouro);margin-top:4px}
+
+/* fundadora */
+.fun{background:var(--carvao)}
+.fun-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}
+.fun-foto{border-radius:var(--rg);overflow:hidden;border:1px solid var(--ouro-fr)}
+.fun-foto img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.fun blockquote{margin:var(--s3) 0 0;padding-left:22px;border-left:2px solid var(--ouro);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.4rem;color:var(--creme);line-height:1.4}
+
+/* localização */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:var(--s5)}
+.mapa{border-radius:var(--rg);overflow:hidden;aspect-ratio:16/11;background:var(--caixa);border:1px solid var(--linha)}
+.mapa iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.4) contrast(1.05)}
+.loc-info{background:var(--caixa);border:1px solid var(--linha);border-radius:var(--rg);padding:36px;display:grid;gap:20px;align-content:center}
+.li{display:flex;gap:16px;align-items:flex-start}
+.li .ic{width:42px;height:42px;border-radius:12px;background:rgba(201,162,39,.12);border:1px solid var(--ouro-fr);flex:none;display:grid;place-items:center}
+.li .ic svg{width:19px;height:19px;color:var(--ouro-lt)}
+.li strong{display:block;color:var(--ouro);font-size:.875rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:5px;font-weight:500}
+.li span{color:var(--creme);font-size:1.02rem;font-weight:400}
+.li small{display:block;color:var(--mut);font-size:.9rem;margin-top:3px}
+
+/* final */
+.final{background:linear-gradient(135deg,#1A1509,var(--preto) 60%);border-top:1px solid var(--linha)}
+.final h2{color:var(--creme)}
+
+/* rodapé */
+.rodape{background:var(--preto);color:var(--mut);padding:var(--s5) 0 var(--s3);border-top:1px solid var(--linha)}
+.rd-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:var(--s4);border-bottom:1px solid var(--linha)}
+.rd-marca b{font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--ouro-lt);display:block;margin-bottom:4px}
+.rd-marca small{font-size:.875rem;letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}
+.rd-marca p{margin-top:16px;font-size:.94rem;max-width:38ch}
+.rodape h4{font-size:.875rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);margin-bottom:16px;font-weight:500}
+.rd-links{display:grid;gap:4px;list-style:none;padding:0;margin:0;font-size:.96rem}
+.rd-links a{min-height:44px;display:inline-flex;align-items:center;padding:2px 0;transition:color .2s}
+.rd-links a:hover{color:var(--ouro-lt)}
+.rd-base{padding-top:var(--s3);display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-size:.95rem}
+
+.flut{position:fixed;right:18px;bottom:18px;z-index:80;width:60px;height:60px;border-radius:50%;background:var(--zap);display:grid;place-items:center;box-shadow:0 10px 28px rgba(14,122,62,.45);transition:transform .25s ease}
+.flut:hover{transform:scale(1.08)}
+.flut svg{width:30px;height:30px;color:#fff}
+
+@media (prefers-reduced-motion:no-preference){
+  .rev{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+  .rev.on{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media(max-width:1024px){
+  .men-grid,.fun-grid,.loc-grid{grid-template-columns:1fr;gap:38px}
+  .met-grid{grid-template-columns:1fr}
+  .v-grid{grid-template-columns:repeat(2,1fr)}
+  .aut-grid{grid-template-columns:repeat(2,1fr)}
+  .rd-top{grid-template-columns:1fr 1fr}
+  .hero-bg::after{background:linear-gradient(180deg,rgba(11,11,11,.82),rgba(11,11,11,.62))}
+}
+@media(max-width:900px){
+  .abrir{display:flex}
+  .menu{position:absolute;top:100%;left:12px;right:12px;flex-direction:column;align-items:stretch;gap:2px;padding:14px;background:var(--caixa);border:1px solid var(--linha);border-radius:16px;display:none}
+  .chk:checked~.menu{display:flex}
+  .menu a{padding:14px 16px;min-height:48px;display:flex;align-items:center;font-size:.8rem}
+  .menu .zap{justify-content:center;margin-top:8px}
+}
+@media(max-width:680px){
+  :root{--s6:56px;--s5:36px}
+  .wrap{width:calc(100% - 26px)}
+  .aut-grid{grid-template-columns:1fr 1fr}
+  .v-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .rd-top{grid-template-columns:1fr;gap:28px}
+  .acoes .btn{width:100%}
+  .hero{min-height:auto}
+  .trilho{scroll-padding-left:13px;padding-inline:13px;margin-inline:-13px}
+  .foto{flex:0 0 68vw}
+  .setas{display:none}
+  .met{padding:28px 22px}
+  .flut{width:56px;height:56px;right:14px;bottom:14px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#inicio" aria-label="Spa Diamond La Evidence, início">
+      <b>Spa Diamond</b><small>La Evidence · Estética Avançada</small>
+    </a>
+    <input class="chk" type="checkbox" id="nav" aria-hidden="true">
+    <label class="abrir" for="nav" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </label>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="#metodos">Métodos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#mentoria">Mentoria</a>
+      <a href="#fundadora">A fundadora</a>
+      <a href="#localizacao">Onde estamos</a>
+      <a class="zap" href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.06c-.25.69-1.45 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.59-.37.79-.37h.57c.18 0 .43-.7.67.51.25.6.84 2.07.91 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.45.52c-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.41Z"/></svg>
+        Agendar
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="img/fachada.webp" alt="Fachada do Spa Diamond La Evidence em Cuiabá" width="1504" height="904" fetchpriority="high">
+  </div>
+  <div class="wrap hero-in">
+    <span class="selo">Estética avançada em Cuiabá</span>
+    <h1>Método próprio.<em>Resultado que se vê.</em></h1>
+    <p class="sub">Harmonização glútea e labial com técnica autoral, desenvolvida ao longo de anos de atendimento e hoje ensinada para profissionais de todo o Brasil.</p>
+    <div class="acoes">
+      <a class="btn btn-ouro" href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20no%20Spa%20Diamond." target="_blank" rel="noopener">Agendar avaliação</a>
+      <a class="btn btn-linha" href="#resultados">Ver resultados</a>
+    </div>
+    <div class="nota">
+      <div><small>Instagram</small>Mais de 300 mil seguidores</div>
+      <div><small>Reconhecimento</small>Troféu Destaque MT 2025</div>
+      <div><small>Formação</small>Profissionais em todo o Brasil</div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTORIDADE -->
+<section class="aut rev">
+  <div class="wrap aut-grid">
+    <div class="au"><div class="n">300 mil</div><div class="l">Seguidores</div></div>
+    <div class="au"><div class="n">2</div><div class="l">Métodos autorais</div></div>
+    <div class="au"><div class="n">4,0★</div><div class="l">Avaliação no Google</div></div>
+    <div class="au"><div class="n">2025</div><div class="l">Troféu Destaque MT</div></div>
+  </div>
+</section>
+
+<!-- MÉTODOS -->
+<section class="sec rev" id="metodos">
+  <div class="wrap">
+    <span class="selo">Técnica autoral</span>
+    <h2 class="tit">Dois métodos, <em>uma assinatura.</em></h2>
+    <p class="lead">Protocolos desenvolvidos e refinados no atendimento diário, hoje ensinados para profissionais de estética em todo o país.</p>
+    <div class="met-grid">
+
+      <article class="met">
+        <span class="tag">Método autoral</span>
+        <h3>Bumbum Brasil <em>360° Glúteo</em></h3>
+        <p>Protocolo de harmonização glútea que trabalha o contorno, o volume e a projeção respeitando a anatomia e a proporção de cada corpo.</p>
+        <ul>
+          <li>Avaliação individual antes de qualquer procedimento</li>
+          <li>Planejamento do resultado junto com a paciente</li>
+          <li>Acompanhamento no pós, não só no dia</li>
+          <li>Técnica ensinada em mentoria para profissionais</li>
+        </ul>
+        <div class="acoes">
+          <a class="btn btn-linha" href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20m%C3%A9todo%20Bumbum%20Brasil%20360%C2%B0%20Gl%C3%BAteo." target="_blank" rel="noopener">Quero saber mais</a>
+        </div>
+      </article>
+
+      <article class="met">
+        <span class="tag">Método autoral</span>
+        <h3>360° <em>Labial</em></h3>
+        <p>Harmonização labial pensada para o rosto inteiro, não só para o volume. O objetivo é equilíbrio, contorno e naturalidade.</p>
+        <ul>
+          <li>Desenho do lábio de acordo com o formato do rosto</li>
+          <li>Volume proporcional, sem exagero</li>
+          <li>Definição de contorno e correção de assimetria</li>
+          <li>Técnica ensinada em mentoria para profissionais</li>
+        </ul>
+        <div class="acoes">
+          <a class="btn btn-linha" href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20m%C3%A9todo%20360%C2%B0%20Labial." target="_blank" rel="noopener">Quero saber mais</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="sec res rev" id="resultados">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="selo" style="justify-content:center">Antes e depois</span>
+      <h2 class="tit">Resultados <em>reais.</em></h2>
+      <p class="lead" style="margin-inline:auto">Cada corpo responde de um jeito. As imagens abaixo são de pacientes atendidas na clínica.</p>
+    </div>
+
+    <div class="abas" role="tablist" aria-label="Escolher tipo de resultado">
+      <button class="aba on" type="button" data-alvo="gluteo" role="tab" aria-selected="true">Glúteo</button>
+      <button class="aba" type="button" data-alvo="labial" role="tab" aria-selected="false">Labial</button>
+    </div>
+
+    <div class="trilho" id="tr-gluteo" tabindex="0" role="region" aria-label="Resultados de harmonização glútea">
+      <figure class="foto"><img src="img/ad-gluteo1.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo2.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo3.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo4.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo5.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo6.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo7.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo8.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo9.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo10.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo11.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo12.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-gluteo13.webp" alt="Antes e depois de harmonização glútea" width="800" height="1422" loading="lazy"></figure>
+    </div>
+
+    <div class="trilho" id="tr-labial" tabindex="0" role="region" aria-label="Resultados de harmonização labial" hidden>
+      <figure class="foto"><img src="img/ad-labial1.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial2.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial3.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial4.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial5.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial6.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial7.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial8.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial9.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial10.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial11.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial12.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+      <figure class="foto"><img src="img/ad-labial13.webp" alt="Antes e depois de harmonização labial" width="800" height="1422" loading="lazy"></figure>
+    </div>
+
+    <div class="setas">
+      <button class="seta" type="button" data-nav="-1" aria-label="Anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18 9 12l6-6"/></svg></button>
+      <button class="seta" type="button" data-nav="1" aria-label="Próximas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    </div>
+
+    <p class="res-nota">Os resultados variam de pessoa para pessoa e dependem da avaliação individual, do organismo e do cuidado no pós-procedimento.</p>
+  </div>
+</section>
+
+<!-- VÍDEOS -->
+<section class="sec vid rev" id="videos">
+  <div class="wrap">
+    <span class="selo">Acompanhe de perto</span>
+    <h2 class="tit">O dia a dia <em>da clínica.</em></h2>
+    <p class="lead">Toque para assistir no Instagram.</p>
+    <div class="v-grid">
+      <a class="v-card" href="https://www.instagram.com/reel/DP4kGXfEhdB/" target="_blank" rel="noopener">
+        <img src="img/reel2.webp" alt="Reel da Academy Diamond" width="722" height="1280" loading="lazy">
+        <span class="v-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="v-leg">Dentro da Academy Diamond</span>
+      </a>
+      <a class="v-card" href="https://www.instagram.com/reel/DRHjOSMkRet/" target="_blank" rel="noopener">
+        <img src="img/reel4.webp" alt="Reel de conquista da clínica" width="720" height="1280" loading="lazy">
+        <span class="v-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="v-leg">Conquistas que a gente celebra</span>
+      </a>
+      <a class="v-card" href="https://www.instagram.com/reel/DPJHnWTDisH/" target="_blank" rel="noopener">
+        <img src="img/ad-gluteo8.webp" alt="Reel sobre ética no atendimento" width="800" height="1422" loading="lazy">
+        <span class="v-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="v-leg">Ética não é uma escolha</span>
+      </a>
+      <a class="v-card" href="https://www.instagram.com/reel/DQFJ60wCXBf/" target="_blank" rel="noopener">
+        <img src="img/ad-labial5.webp" alt="Reel de procedimento na clínica" width="800" height="1422" loading="lazy">
+        <span class="v-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="v-leg">Bastidores do procedimento</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORIA -->
+<section class="sec men rev" id="mentoria">
+  <div class="wrap men-grid">
+    <div>
+      <span class="selo">Para profissionais</span>
+      <h2 class="tit">Aprenda o método <em>direto com quem criou.</em></h2>
+      <p class="lead">A mentoria é para profissionais de estética que querem dominar a técnica, elevar o padrão de resultado e cobrar por isso.</p>
+      <ul class="men-lista">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          <span>Formação nos protocolos Bumbum Brasil 360° e 360° Labial</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          <span>Prática acompanhada, não só teoria em slide</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          <span>Turmas reduzidas, com atenção individual</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          <span>Profissionais formadas em vários estados do país</span>
+        </li>
+      </ul>
+      <div class="acoes">
+        <a class="btn btn-ouro" href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Sou%20profissional%20de%20est%C3%A9tica%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20a%20mentoria." target="_blank" rel="noopener">Quero fazer a mentoria</a>
+      </div>
+    </div>
+    <div class="men-foto">
+      <img src="img/mentoria.webp" alt="Profissional paramentada realizando procedimento na clínica" width="872" height="1090" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- FUNDADORA -->
+<section class="sec fun rev" id="fundadora">
+  <div class="wrap fun-grid">
+    <div class="fun-foto">
+      <img src="img/marca.webp" alt="Laura Lima, fundadora do Spa Diamond La Evidence" width="900" height="900" loading="lazy">
+    </div>
+    <div>
+      <span class="selo">Quem está por trás</span>
+      <h2 class="tit">Laura Lima</h2>
+      <p class="lead">Fundadora do Spa Diamond La Evidence e criadora dos métodos Bumbum Brasil 360° Glúteo e 360° Labial.</p>
+      <p class="lead" style="margin-top:14px">Construiu uma audiência de mais de 300 mil pessoas mostrando o trabalho de dentro da clínica, e hoje divide o método com profissionais de estética de todo o Brasil.</p>
+      <blockquote>Muito além da estética: um método pensado para devolver autoestima.</blockquote>
+      <div class="acoes">
+        <a class="btn btn-linha" href="https://www.instagram.com/spalaevidence/" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="sec rev" id="localizacao">
+  <div class="wrap">
+    <span class="selo">Onde estamos</span>
+    <h2 class="tit">Jardim Petrópolis, <em>Cuiabá.</em></h2>
+    <div class="loc-grid">
+      <div class="mapa">
+        <iframe src="https://maps.google.com/maps?q=Spa%20Diamond%20La%20Evidence%20Rua%20Generoso%20Ciriaco%20Maciel%20Cuiaba&amp;z=16&amp;hl=pt-BR&amp;output=embed" title="Mapa do Spa Diamond La Evidence, Cuiabá" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="loc-info">
+        <div class="li">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10Z"/><circle cx="12" cy="11" r="2.4"/></svg></span>
+          <span><strong>Endereço</strong>R. Generoso Ciríaco Maciel<small>Jardim Petrópolis, Cuiabá, MT · CEP 78070-050</small></span>
+        </div>
+        <div class="li">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v2.6a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.7 2 2 0 0 1 4.1 1.5h2.6a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L7.8 9.3a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <span><strong>Contato</strong>(65) 99995-0592</span>
+        </div>
+        <div class="li">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.3"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.5" cy="6.5" r="1.15" fill="currentColor" stroke="none"/></svg></span>
+          <span><strong>Instagram</strong>@spalaevidence</span>
+        </div>
+        <div class="acoes" style="margin-top:4px">
+          <a class="btn btn-ouro" href="https://www.google.com/maps/search/?api=1&amp;query=Spa+Diamond+La+Evidence+Cuiab%C3%A1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21.1 7 14.2l-5-4.9 6.9-1L12 2Z"/></svg>
+            Nos avalie no Google
+          </a>
+          <a class="btn btn-linha" href="https://www.google.com/maps/search/?api=1&amp;query=Spa+Diamond+La+Evidence+Cuiab%C3%A1" target="_blank" rel="noopener">Traçar rota</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec final rev">
+  <div class="wrap" style="text-align:center">
+    <span class="selo" style="justify-content:center">Vamos conversar</span>
+    <h2 class="tit">Seu resultado <em>começa com uma avaliação.</em></h2>
+    <p class="lead" style="margin-inline:auto">Cada procedimento é planejado depois de entender o seu corpo, o seu objetivo e o que é possível alcançar com segurança.</p>
+    <div class="acoes" style="justify-content:center">
+      <a class="btn btn-zap" href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.06c-.25.69-1.45 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.59-.37.79-.37h.57c.18 0 .43-.7.67.51.25.6.84 2.07.91 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.45.52c-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.41Z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a class="btn btn-linha" href="https://www.instagram.com/spalaevidence/" target="_blank" rel="noopener">Seguir no Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rd-top">
+      <div class="rd-marca">
+        <b>Spa Diamond</b><small>La Evidence · Estética Avançada</small>
+        <p>Estética avançada em Cuiabá, com método autoral e formação de profissionais em todo o Brasil.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul class="rd-links">
+          <li><a href="#metodos">Métodos</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#videos">Vídeos</a></li>
+          <li><a href="#mentoria">Mentoria</a></li>
+          <li><a href="#fundadora">A fundadora</a></li>
+          <li><a href="#localizacao">Onde estamos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul class="rd-links">
+          <li><a href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Vim%20pelo%20site." target="_blank" rel="noopener">(65) 99995-0592</a></li>
+          <li><a href="https://www.instagram.com/spalaevidence/" target="_blank" rel="noopener">@spalaevidence</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Spa+Diamond+La+Evidence+Cuiab%C3%A1" target="_blank" rel="noopener">R. Generoso Ciríaco Maciel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rd-base">
+      <span>© 2026 Spa Diamond La Evidence · Cuiabá, MT</span>
+      <span>Resultados variam de pessoa para pessoa</span>
+    </div>
+  </div>
+</footer>
+
+<a class="flut" href="https://wa.me/5565999950592?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.06c-.25.69-1.45 1.32-2 1.4-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.59-.37.79-.37h.57c.18 0 .43-.7.67.51.25.6.84 2.07.91 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.45.52c-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.12.07.72-.18 1.41Z"/></svg>
+</a>
+
+<script>
+(function(){
+  var chk=document.getElementById('nav');
+  document.querySelectorAll('.menu a').forEach(function(a){
+    a.addEventListener('click',function(){chk.checked=false});
+  });
+
+  // abas de resultado
+  var abas=document.querySelectorAll('.aba');
+  abas.forEach(function(b){
+    b.addEventListener('click',function(){
+      abas.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false')});
+      b.classList.add('on'); b.setAttribute('aria-selected','true');
+      document.querySelectorAll('.trilho').forEach(function(t){t.hidden=true});
+      var alvo=document.getElementById('tr-'+b.dataset.alvo);
+      if(alvo){ alvo.hidden=false; carrega(alvo); }
+    });
+  });
+
+  function carrega(t){
+    t.querySelectorAll('img[loading="lazy"]').forEach(function(im){
+      im.loading='eager'; if(!im.complete) im.src=im.src;
+    });
+  }
+  function visivel(){ return document.querySelector('.trilho:not([hidden])') }
+
+  document.querySelectorAll('[data-nav]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=visivel(); if(!t) return;
+      var c=t.querySelector('.foto');
+      var passo=c?c.getBoundingClientRect().width+16:270;
+      var n=Math.max(1,Math.floor(t.clientWidth/passo));
+      t.scrollBy({left:passo*n*Number(b.dataset.nav),behavior:'smooth'});
+    });
+  });
+
+  var alvo=document.querySelector('.trilho');
+  if(alvo){
+    var suave=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timer=null, retomar=null, naTela=false;
+
+    var passoUm=function(){
+      var t=visivel(); if(!t) return;
+      var c=t.querySelector('.foto');
+      var largura=c?c.getBoundingClientRect().width+16:270;
+      var fim=t.scrollWidth-t.clientWidth-2;
+      if(t.scrollLeft>=fim) t.scrollTo({left:0,behavior:'smooth'});
+      else t.scrollBy({left:largura,behavior:'smooth'});
+    };
+    var liga=function(){ if(!timer && naTela && suave) timer=setInterval(passoUm,2500) };
+    var desliga=function(){ clearInterval(timer); timer=null };
+    var pausar=function(){ desliga(); clearTimeout(retomar); retomar=setTimeout(liga,6000) };
+
+    new IntersectionObserver(function(es){
+      naTela=es[0].isIntersecting;
+      if(naTela){ carrega(visivel()||alvo); liga(); } else desliga();
+    },{threshold:.15,rootMargin:'250px 0px'}).observe(alvo);
+
+    document.querySelectorAll('.trilho').forEach(function(t){
+      ['pointerdown','wheel','touchstart','keydown'].forEach(function(ev){
+        t.addEventListener(ev,pausar,{passive:true});
+      });
+      t.addEventListener('mouseenter',desliga);
+      t.addEventListener('mouseleave',liga);
+      t.addEventListener('focusin',pausar);
+    });
+    document.querySelectorAll('[data-nav],.aba').forEach(function(b){ b.addEventListener('click',pausar) });
+    document.addEventListener('visibilitychange',function(){ document.hidden?desliga():liga() });
+  }
+
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})
+  },{threshold:.1});
+  document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
