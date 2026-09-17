@@ -24,22 +24,14 @@
   + '.diana-b,.diana-p,.diana-c{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box}'
   + '.diana-b *,.diana-p *{box-sizing:border-box}'
   + '.diana-b{position:relative;width:78px;height:78px;flex:none;border:0;padding:0;'
-  +   'cursor:pointer;background:transparent;display:grid;place-items:center;'
+  +   'border-radius:50%;overflow:hidden;background:#050403;'
+  +   'cursor:pointer;display:grid;place-items:center;'
   +   'animation:diana-flutua 4.2s ease-in-out infinite;transition:transform .22s ease;'
   +   'filter:drop-shadow(0 10px 16px rgba(0,0,0,.45)) drop-shadow(0 0 14px rgba(201,162,39,.22))}'
   + '.diana-b:hover{transform:scale(1.06)}'
   + '.diana-b:active{transform:scale(.95)}'
-  + '.diana-b svg{width:100%;height:100%;overflow:visible}'
-  + '.diana-av svg{width:120%;height:120%;overflow:visible}'
-  + '.diana-av{background:transparent!important;filter:drop-shadow(0 2px 5px rgba(0,0,0,.4))}'
-  + '.diana-olho{transform-origin:center;animation:diana-pisca-olho 5.6s infinite}'
-  + '.diana-farol{animation:diana-farol 2.8s ease-in-out infinite}'
-  + '.diana-sombra{animation:diana-sombra 4.2s ease-in-out infinite}'
-  + '@keyframes diana-farol{0%,100%{opacity:.45}50%{opacity:1}}'
-  + '@keyframes diana-sombra{0%,100%{transform:scaleX(1);opacity:.3}50%{transform:scaleX(.86);opacity:.2}}'
-  + '.diana-antena{transform-origin:22px 9px;animation:diana-antena 3.4s ease-in-out infinite}'
-  + '@keyframes diana-pisca-olho{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}}'
-  + '@keyframes diana-antena{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}'
+  + '.diana-b video,.diana-av video{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}'
+  + '.diana-av{background:#050403;filter:drop-shadow(0 2px 5px rgba(0,0,0,.4))}'
   + '.diana-orb{position:fixed;right:18px;bottom:18px;z-index:2147483000;display:flex;align-items:center;gap:10px;'
   +   'flex-direction:row-reverse;animation:diana-ronda 26s ease-in-out infinite;will-change:transform}'
   + '.diana-orb.diana-parado{animation:none;transform:none}'
@@ -120,66 +112,15 @@
   + '@media (max-width:420px){.diana-p{right:10px;left:10px;bottom:10px;width:auto;height:min(78dvh,560px)}'
   +   '.diana-orb{right:14px;bottom:14px}.diana-cv{max-width:150px;font-size:13px;padding:9px 13px}'
   +   '@keyframes diana-ronda{0%,8%{transform:translateX(0)}38%,54%{transform:translateX(-38vw)}84%,100%{transform:translateX(0)}}}'
-  + '@media (prefers-reduced-motion:reduce){.diana-b,.diana-b::after,.diana-m,.diana-p,.diana-orb,.diana-olho,.diana-antena{animation:none!important}}';
+  + '@media (prefers-reduced-motion:reduce){.diana-b,.diana-b::after,.diana-m,.diana-p,.diana-orb{animation:none!important}}';
 
   var st = document.createElement('style');
   st.textContent = css;
   document.head.appendChild(st);
 
   /* ---------------- ícones ---------------- */
-  var icoRobo = ''
-    + '<svg viewBox="0 0 96 96" fill="none" aria-hidden="true" class="diana-robo">'
-    +   '<defs>'
-    +     '<linearGradient id="zbMetal" x1="18" y1="16" x2="78" y2="82" gradientUnits="userSpaceOnUse">'
-    +       '<stop offset="0" stop-color="#fff3cf"/><stop offset=".22" stop-color="#f3d68e"/>'
-    +       '<stop offset=".5" stop-color="#caa03a"/><stop offset=".74" stop-color="#8f6d18"/>'
-    +       '<stop offset="1" stop-color="#c9a544"/></linearGradient>'
-    +     '<linearGradient id="zbTopo" x1="48" y1="16" x2="48" y2="34" gradientUnits="userSpaceOnUse">'
-    +       '<stop offset="0" stop-color="#fffdf3" stop-opacity=".92"/>'
-    +       '<stop offset=".55" stop-color="#fff3d2" stop-opacity=".28"/>'
-    +       '<stop offset="1" stop-color="#fff8e4" stop-opacity="0"/></linearGradient>'
-    +     '<linearGradient id="zbBase" x1="48" y1="58" x2="48" y2="78" gradientUnits="userSpaceOnUse">'
-    +       '<stop offset="0" stop-color="#5c440d" stop-opacity="0"/>'
-    +       '<stop offset="1" stop-color="#5c440d" stop-opacity=".42"/></linearGradient>'
-    +     '<linearGradient id="zbVisor" x1="48" y1="33" x2="48" y2="60" gradientUnits="userSpaceOnUse">'
-    +       '<stop offset="0" stop-color="#0d1418"/><stop offset=".55" stop-color="#04080b"/>'
-    +       '<stop offset="1" stop-color="#101c22"/></linearGradient>'
-    +     '<linearGradient id="zbBrilho" x1="26" y1="34" x2="46" y2="52" gradientUnits="userSpaceOnUse">'
-    +       '<stop offset="0" stop-color="#ffffff" stop-opacity=".3"/>'
-    +       '<stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>'
-    +     '<radialGradient id="zbLuz" cx="0" cy="0" r="1" gradientTransform="translate(48 47) scale(26 16)">'
-    +       '<stop offset="0" stop-color="#8fe9ff" stop-opacity=".55"/>'
-    +       '<stop offset="1" stop-color="#8fe9ff" stop-opacity="0"/></radialGradient>'
-    +     '<filter id="zbGlow" x="-60%" y="-60%" width="220%" height="220%">'
-    +       '<feGaussianBlur stdDeviation="2.1" result="b"/>'
-    +       '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'
-    +     '<clipPath id="zbCorte"><rect x="26" y="33" width="44" height="27" rx="12"/></clipPath>'
-    +   '</defs>'
-    +   '<ellipse cx="48" cy="88" rx="21" ry="4.4" fill="#000" opacity=".3" class="diana-sombra"/>'
-    +   '<g class="diana-antena">'
-    +     '<path d="M48 17V8" stroke="url(#zbMetal)" stroke-width="3.4" stroke-linecap="round"/>'
-    +     '<circle cx="48" cy="5.6" r="3.9" fill="#7fe3ff" filter="url(#zbGlow)" class="diana-farol"/>'
-    +   '</g>'
-    +   '<rect x="10.5" y="38" width="8.5" height="19" rx="4.2" fill="url(#zbMetal)"/>'
-    +   '<rect x="77" y="38" width="8.5" height="19" rx="4.2" fill="url(#zbMetal)"/>'
-    +   '<rect x="12.8" y="42.5" width="3.9" height="10" rx="1.9" fill="#6d5416" opacity=".75"/>'
-    +   '<rect x="79.3" y="42.5" width="3.9" height="10" rx="1.9" fill="#6d5416" opacity=".75"/>'
-    +   '<rect x="18" y="16" width="60" height="62" rx="21" fill="url(#zbMetal)"/>'
-    +   '<rect x="18" y="16" width="60" height="62" rx="21" fill="url(#zbTopo)"/>'
-    +   '<rect x="18" y="16" width="60" height="62" rx="21" fill="url(#zbBase)"/>'
-    +   '<rect x="21.5" y="19.5" width="53" height="55" rx="18" stroke="#fff6dd" stroke-opacity=".5" stroke-width="1.2"/>'
-    +   '<rect x="26" y="33" width="44" height="27" rx="12" fill="url(#zbVisor)"/>'
-    +   '<g clip-path="url(#zbCorte)">'
-    +     '<rect x="26" y="33" width="44" height="27" fill="url(#zbLuz)"/>'
-    +     '<path d="M26 33h44v27z" fill="url(#zbBrilho)"/>'
-    +   '</g>'
-    +   '<rect x="26" y="33" width="44" height="27" rx="12" stroke="#2b3a42" stroke-width="1.1"/>'
-    +   '<g class="diana-olhos" filter="url(#zbGlow)">'
-    +     '<rect x="34.5" y="41.5" width="7" height="10" rx="3.5" fill="#a8f0ff" class="diana-olho"/>'
-    +     '<rect x="54.5" y="41.5" width="7" height="10" rx="3.5" fill="#a8f0ff" class="diana-olho"/>'
-    +   '</g>'
-    +   '<path d="M39.5 65q8.5 5.2 17 0" stroke="#5c440d" stroke-opacity=".72" stroke-width="2.8" stroke-linecap="round" class="diana-boca"/>'
-    + '</svg>';
+  var icoFada = '<video src="atendente/diana-avatar.mp4" poster="atendente/diana-avatar-poster.jpg" '
+    + 'autoplay muted loop playsinline aria-hidden="true"></video>';
   var icoChat = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-4-.9L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 8.4-8.4h.5a8.4 8.4 0 0 1 8.1 8z"/></svg>';
   var icoZap  = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>';
   var icoMic  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="9" y="2" width="6" height="11" rx="3" fill="currentColor" stroke="none"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/><path d="M8.5 21h7"/></svg>';
@@ -189,7 +130,7 @@
   var bolha = document.createElement('button');
   bolha.className = 'diana-b';
   bolha.setAttribute('aria-label', 'Falar com o atendente');
-  bolha.innerHTML = icoRobo;
+  bolha.innerHTML = icoFada;
 
   var convite = document.createElement('div');
   convite.className = 'diana-cv';
@@ -200,7 +141,7 @@
   painel.setAttribute('aria-label', 'Atendimento');
   painel.innerHTML =
       '<div class="diana-h">'
-    +   '<div class="diana-av">' + icoRobo + '</div>'
+    +   '<div class="diana-av">' + icoFada + '</div>'
     +   '<div class="diana-hn"><b>Diana</b><i>Spa Diamond · responde na hora</i></div>'
     +   '<button class="diana-x" aria-label="Fechar">&times;</button>'
     + '</div>'
