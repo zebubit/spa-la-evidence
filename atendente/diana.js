@@ -10,6 +10,7 @@
     var s = document.getElementsByTagName('script');
     return s[s.length - 1];
   })();
+  var BASE    = script.src.replace(/[^\/]+$/, '');
 
   var API     = 'https://n8n.dionefolador.com/webhook/spa-diamond-voz';
   var WHATS   = script.getAttribute('data-whats') || '5565981089959';
@@ -23,15 +24,14 @@
   var css = ''
   + '.diana-b,.diana-p,.diana-c{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box}'
   + '.diana-b *,.diana-p *{box-sizing:border-box}'
-  + '.diana-b{position:relative;width:78px;height:78px;flex:none;border:0;padding:0;'
-  +   'border-radius:50%;overflow:hidden;background:#050403;'
+  + '.diana-b{position:relative;width:104px;height:104px;flex:none;border:0;padding:0;'
+  +   'background:transparent;'
   +   'cursor:pointer;display:grid;place-items:center;'
-  +   'animation:diana-flutua 4.2s ease-in-out infinite;transition:transform .22s ease;'
-  +   'filter:drop-shadow(0 10px 16px rgba(0,0,0,.45)) drop-shadow(0 0 14px rgba(201,162,39,.22))}'
+  +   'animation:diana-flutua 4.2s ease-in-out infinite;transition:transform .22s ease}'
   + '.diana-b:hover{transform:scale(1.06)}'
   + '.diana-b:active{transform:scale(.95)}'
-  + '.diana-b video,.diana-av video{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}'
-  + '.diana-av{background:#050403;filter:drop-shadow(0 2px 5px rgba(0,0,0,.4))}'
+  + '.diana-b video,.diana-av video{width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:screen}'
+  + '.diana-av{background:transparent;width:46px;height:46px}'
   + '.diana-orb{position:fixed;right:18px;bottom:18px;z-index:2147483000;display:flex;align-items:center;gap:10px;'
   +   'flex-direction:row-reverse;animation:diana-ronda 26s ease-in-out infinite;will-change:transform}'
   + '.diana-orb.diana-parado{animation:none;transform:none}'
@@ -119,7 +119,7 @@
   document.head.appendChild(st);
 
   /* ---------------- ícones ---------------- */
-  var icoFada = '<video src="atendente/diana-avatar.mp4" poster="atendente/diana-avatar-poster.jpg" '
+  var icoFada = '<video src="' + BASE + 'diana-avatar.mp4" poster="' + BASE + 'diana-avatar-poster.jpg" '
     + 'autoplay muted loop playsinline aria-hidden="true"></video>';
   var icoChat = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-4-.9L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 8.4-8.4h.5a8.4 8.4 0 0 1 8.1 8z"/></svg>';
   var icoZap  = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>';
