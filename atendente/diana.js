@@ -13,7 +13,8 @@
   var BASE    = script.src.replace(/[^\/]+$/, '');
 
   var API     = 'https://n8n.dionefolador.com/webhook/spa-diamond-voz';
-  var WHATS   = script.getAttribute('data-whats') || '5565981089959';
+  var EQUIPE  = ['556581334835', '556592431290'];
+  var WHATS   = script.getAttribute('data-whats') || EQUIPE[Math.floor(Math.random() * EQUIPE.length)];
   var SESSAO  = 'spa-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
 
   var CONVITES = ['Posso te ajudar?', 'Quer saber dos procedimentos?', 'Fala comigo'];
@@ -149,7 +150,7 @@
     +   '<button class="diana-x" aria-label="Fechar">&times;</button>'
     + '</div>'
     + '<div class="diana-atalho">'
-    +   '<a href="https://wa.me/' + WHATS + '?text=' + encodeURIComponent('Olá Dione! Vim pelo link da bio.') + '" target="_blank" rel="noopener">'
+    +   '<a href="https://wa.me/' + WHATS + '?text=' + encodeURIComponent('Olá! Vim pelo site do Spa Diamond.') + '" target="_blank" rel="noopener">'
     +     icoZap + 'Prefiro falar direto no WhatsApp</a>'
     + '</div>'
     + '<div class="diana-c"></div>'
@@ -365,7 +366,7 @@
         var b = msg('ele', 'Tive um problema de conexão. Se preferir, fale direto no WhatsApp:');
         b.appendChild(document.createElement('br'));
         b.appendChild(botaoZap({
-          link: 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent('Olá Dione! Vim pelo link da bio.')
+          link: 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent('Olá! Vim pelo site do Spa Diamond.')
         }));
       })
       .then(function () {
